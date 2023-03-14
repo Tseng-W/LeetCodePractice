@@ -41,8 +41,47 @@ class Solution {
     }
 }
 
-Solution().prisonAfterNDays([1,0,0,1,0,0,1,0], 1000000000) == [0,0,1,1,1,1,1,0]
-Solution().prisonAfterNDays([0,0,1,1,1,1,0,0], 8) == [0,0,0,1,1,0,0,0]
-Solution().prisonAfterNDays([0,1,0,1,1,0,0,1], 7) == [0,0,1,1,0,0,0,0]
+class Solution_New {
+    func prisonAfterNDays(_ cells: [Int], _ n: Int) -> [Int] {
+        var dict: [Int: Int] = [:]
+        var day = 0
+        var k8 = (0..<8).reduce(0) {
+            return $0 | (cells[$1] << $1)
+        }
 
+        while dict[k8] == nil {
+            if day == n { break }
+            dict[k8] = day
+            day += 1
+            k8 = ~((k8 << 1)^(k8 >> 1)) & 0b1111110
+        }
+
+        if day != n, let start = dict[k8] {
+            let cycle = day - start
+            for _ in 0..<(n - day) % cycle {
+                k8 = ~((k8 << 1)^(k8 >> 1)) & 0b1111110
+            }
+        }
+
+        return (0..<8).map({ k8 >> $0 & 1 })
+    }
+}
+
+Solution_New().prisonAfterNDays([1, 0, 1, 0, 0, 1, 0, 1], 100000)
+
+var cell: UInt8 = 0b00100101
+var nextDay = ~((cell << 1)^(cell >> 1)) & 0b1111110
+String(cell, radix: 2)
+String((cell << 1), radix: 2).leftPadding(8)
+String((cell >> 1), radix: 2).leftPadding(8)
+String(nextDay, radix: 2).leftPadding(8)
+
+extension String {
+    func leftPadding(_ length: Int) -> String {
+        let padding = length - count
+        guard padding > 0 else { return self }
+        String(repeating: "0", count: padding)
+        return String(repeating: "0", count: padding) + self
+    }
+}
 //: [Next](@next)

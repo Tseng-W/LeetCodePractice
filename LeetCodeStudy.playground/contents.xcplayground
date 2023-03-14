@@ -15,5 +15,7 @@
         <page name='107. Binary Tree Level Order Traversal II'/>
         <page name='957. Prison Cells After N Days'/>
         <page name='227. Basic Calculator II'/>
+        <page name='27. Remove Element'/>
+        <page name='167. Two Sum II - Input Array Is Sorted '/>
     </pages>
 </playground>
