@@ -17,5 +17,9 @@
         <page name='227. Basic Calculator II'/>
         <page name='27. Remove Element'/>
         <page name='167. Two Sum II - Input Array Is Sorted '/>
+        <page name='264. Ugly Number II '/>
+        <page name='461. Hamming Distance '/>
+        <page name='66. Plus One '/>
+        <page name='463. Island Perimeter '/>
     </pages>
 </playground>
