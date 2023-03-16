@@ -38,8 +38,48 @@ import Foundation
 
 class Solution {
     func islandPerimeter(_ grid: [[Int]]) -> Int {
+        var edgeCount = 0
 
+        for row in 0..<grid.count {
+            for col in 0..<grid[row].count where grid[row][col] == 1 {
+                if row - 1 < 0 || grid[row - 1][col] == 0 {
+                    edgeCount += 1
+                }
+                if row + 1 >= grid.count || grid[row + 1][col] == 0 {
+                    edgeCount += 1
+                }
+                if col - 1 < 0 || grid[row][col - 1] == 0 {
+                    edgeCount += 1
+                }
+                if col + 1 >= grid[row].count || grid[row][col + 1] == 0 {
+                    edgeCount += 1
+                }
+            }
+        }
+        return edgeCount
     }
 }
+
+class Solution2 {
+    func islandPerimeter(_ grid: [[Int]]) -> Int {
+        var islandCount = 0
+        var neighborCount = 0
+
+        for row in 0..<grid.count {
+            for col in 0..<grid[row].count where grid[row][col] == 1 {
+                islandCount += 1
+                if row + 1 < grid.count && grid[row + 1][col] == 1 {
+                    neighborCount += 1
+                }
+                if col + 1 < grid[row].count && grid[row][col + 1] == 1 {
+                    neighborCount += 1
+                }
+            }
+        }
+        return islandCount * 4 - neighborCount * 2
+    }
+}
+
+Solution().islandPerimeter([[1, 1]]) == 6
 
 //: [Next](@next)

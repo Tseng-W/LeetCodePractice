@@ -41,8 +41,25 @@ import Foundation
 
 class Solution {
     func plusOne(_ digits: [Int]) -> [Int] {
+        var addOne = true
+        var mutable = digits
 
+        for index in (0..<digits.count).reversed() where addOne {
+            if mutable[index] >= 9 {
+                mutable[index] = 0
+                if index == 0 {
+                    return [1] + mutable
+                }
+            } else {
+                mutable[index] += 1
+                addOne = false
+            }
+        }
+
+        return mutable
     }
 }
+
+Solution().plusOne([9,9,9])
 
 //: [Next](@next)
