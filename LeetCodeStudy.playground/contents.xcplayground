@@ -21,5 +21,10 @@
         <page name='461. Hamming Distance '/>
         <page name='66. Plus One '/>
         <page name='463. Island Perimeter '/>
+        <page name='704. Binary Search '/>
+        <page name='278. First Bad Version '/>
+        <page name='34. Find First and Last Position of Element in Sorted Array '/>
+        <page name='15. 3Sum'/>
+        <page name='662. Maximum Width of Binary Tree '/>
     </pages>
 </playground>
