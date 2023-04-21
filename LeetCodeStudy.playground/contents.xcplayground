@@ -26,5 +26,8 @@
         <page name='34. Find First and Last Position of Element in Sorted Array '/>
         <page name='15. 3Sum'/>
         <page name='662. Maximum Width of Binary Tree '/>
+        <page name='219. Contains Duplicate II'/>
+        <page name='3. Longest Substring Without Repeating Characters '/>
+        <page name='395. Longest Substring with At Least K Repeating Characters '/>
     </pages>
 </playground>
