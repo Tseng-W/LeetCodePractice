@@ -29,5 +29,7 @@
         <page name='219. Contains Duplicate II'/>
         <page name='3. Longest Substring Without Repeating Characters '/>
         <page name='395. Longest Substring with At Least K Repeating Characters '/>
+        <page name='151. Reverse Words in a String'/>
+        <page name='50. Pow(x, n)'/>
     </pages>
 </playground>
