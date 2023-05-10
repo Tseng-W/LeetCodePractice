@@ -31,5 +31,7 @@
         <page name='395. Longest Substring with At Least K Repeating Characters '/>
         <page name='151. Reverse Words in a String'/>
         <page name='50. Pow(x, n)'/>
+        <page name='621. Task Scheduler '/>
+        <page name='309. Best Time to Buy and Sell Stock with Cooldown '/>
     </pages>
 </playground>
