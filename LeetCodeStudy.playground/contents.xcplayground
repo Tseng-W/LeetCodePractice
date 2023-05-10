@@ -33,5 +33,6 @@
         <page name='50. Pow(x, n)'/>
         <page name='621. Task Scheduler '/>
         <page name='309. Best Time to Buy and Sell Stock with Cooldown '/>
+        <page name='347. Top K Frequent Elements '/>
     </pages>
 </playground>
